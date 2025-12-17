@@ -11,6 +11,9 @@ cypress/downloads/
 allure-results/
 allure-report/
 
+# But allow docs/allure-report for GitHub Pages
+!docs/allure-report/
+
 # Sensitive files - DO NOT COMMIT REAL CREDENTIALS
 cypress/user-accounts.txt
 
