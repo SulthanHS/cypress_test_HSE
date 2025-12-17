@@ -1,0 +1,59 @@
+Login & Dashboard Admin	UAT-ADM-001  (Login Berhasil)	1. Buka halaman login aplikasi.  2. Masukkan email dan password admin yang valid.  3. Klik tombol Login.
+	UAT-ADM-002  (Login Gagal: Password Salah)	1. Buka halaman login.  2. Masukkan email admin yang valid.  3. Masukkan password yang salah.  4. Klik tombol Login.
+	UAT-ADM-003  (Login Gagal: Email Tidak Ditemukan)	1. Buka halaman login.  2. Masukkan email yang tidak terdaftar.  3. Masukkan password.  4. Klik tombol Login.
+	UAT-ADM-004  (Verifikasi Tampilan Dashboard)	1. Setelah berhasil login, periksa tampilan dashboard.  2. Verifikasi angka total pengguna, admin, supervisor, dan staf.
+	UAT-ADM-005  (Tinjau Aktivitas Terbaru)	1. Periksa bagian Recent Activities di dashboard.  2. Verifikasi apakah aktivitas terbaru pengguna lain (misalnya, permintaan baru) tercatat.
+Manajemen Pengguna Admin	UAT-ADM-006  (Buat Pengguna Baru)	1. Navigasi ke menu User Management.  2. Klik tombol Add New User.  3. Isi formulir: Nama, Email, Password, Confirm Password, dan pilih Role.  4. Klik tombol Create User.
+	UAT-ADM-007  (Buat Pengguna Gagal: Email Duplikat)	1. Navigasi ke User Management.  2. Klik Add New User.  3. Isi formulir dengan data pengguna baru, tetapi gunakan email yang sudah terdaftar.  4. Klik tombol Create User.
+	UAT-ADM-008  (Edit Detail Pengguna)	1. Pada daftar pengguna di User Management, klik tombol Edit pada salah satu pengguna.  2. Ubah peran pengguna dari Operator menjadi Safety Officer.  3. Klik tombol Simpan Perubahan.
+	UAT-ADM-009  (Hapus Pengguna)	1. Pada daftar pengguna, klik tombol Delete pada pengguna yang akan dihapus.  2. Akan muncul pop-up konfirmasi, klik Yes atau Hapus.
+	UAT-ADM-010  (Verifikasi Akses Admin)	1. Login sebagai Admin.  2. Coba akses menu yang seharusnya hanya bisa diakses oleh peran lain, misalnya My Daily Reports.
+	UAT-ADM-011  (Cari Pengguna Berdasarkan Nama/Email)	1. Navigasi ke User Management.  2. Gunakan fungsi pencarian dan ketik nama pengguna yang ada di daftar.
+	UAT-ADM-012  (Verifikasi Jumlah Pengguna di Dashboard)	1. Catat jumlah "Total Users" di dashboard.  2. Buat satu pengguna baru.  3. Kembali ke dashboard.
+Inventaris Admin	UAT-ADM-013  (Verifikasi Lihat Inventaris)	1. Navigasi ke menu Inventory.  2. Periksa daftar inventaris yang ada.
+	UAT-ADM-014  (Verifikasi Cari & Filter Inventaris)	1. Navigasi ke Inventory.  2. Gunakan fungsi pencarian atau filter berdasarkan status.
+	UAT-ADM-015  (Update Status Inventaris)	1. Pilih salah satu item di daftar inventaris.  2. Klik tombol Update Status.  3. Pilih status baru, misalnya In Use.  4. Klik Simpan Perubahan.
+Permintaan Peralatan Safety Officer	UAT-SO-001  (Buat Permintaan Peralatan)	1. Login sebagai Safety Officer.  2. Navigasi ke My Requests.  3. Klik tombol New Request.  4. Isi formulir dengan data valid (Nama Peralatan, Kategori, Kuantitas, dll.).  5. Klik Submit.
+	UAT-SO-002  (Buat Permintaan Gagal: Data Tidak Lengkap)	1. Login sebagai Safety Officer.  2. Navigasi ke My Requests > New Request.  3. Biarkan salah satu kolom penting kosong, misalnya Equipment Name.  4. Klik Submit.
+	UAT-SO-003  (Verifikasi Lihat Permintaan Sendiri)	1. Login sebagai Safety Officer.  2. Navigasi ke My Requests.  3. Periksa daftar permintaan.
+	UAT-SO-004  (Edit Permintaan Belum Disetujui)	1. Buat permintaan baru.  2. Pada permintaan yang berstatus Pending, klik Edit.  3. Ubah kuantitas atau deskripsi.  4. Klik Simpan Perubahan.
+	UAT-SO-005  (Hapus Permintaan Belum Disetujui)	1. Buat permintaan baru.  2. Pada permintaan yang berstatus Pending, klik Delete.  3. Konfirmasi penghapusan pada pop-up.
+	UAT-SO-006  (Verifikasi Notifikasi Persetujuan)	1. Buat permintaan.  2. Minta Supervisor untuk menyetujui permintaan tersebut.  3. Periksa notifikasi di akun Safety Officer.
+Laporan Masalah Safety Officer	UAT-SO-007  (Selesaikan Laporan Masalah)	1. Login sebagai Safety Officer.  2. Navigasi ke menu Problem Reports.  3. Klik tombol Resolve pada laporan yang statusnya Open.
+Permintaan Peralatan Supervisor	UAT-SPV-001  (Setujui Permintaan Peralatan)	1. Login sebagai Supervisor.  2. Navigasi ke Equipment Requests.  3. Klik tombol Review pada permintaan yang berstatus Pending.  4. Klik tombol Approve.
+	UAT-SPV-002  (Tolak Permintaan Peralatan)	1. Login sebagai Supervisor.  2. Navigasi ke Equipment Requests.  3. Klik tombol Review pada permintaan yang berstatus Pending.  4. Klik tombol Reject.
+	UAT-SPV-003  (Verifikasi Notifikasi)	1. Login sebagai Supervisor.  2. Setujui atau tolak permintaan.  3. Periksa notifikasi yang diterima oleh Safety Officer yang membuat permintaan.
+	UAT-SPV-004  (Tinjau Laporan Harian)	1. Login sebagai Supervisor.  2. Navigasi ke Daily Reports.  3. Klik Review pada laporan yang masuk.
+Laporan Masalah Operator	UAT-OP-001  (Buat Laporan Masalah)	1. Login sebagai Operator.  2. Navigasi ke Problem Reports.  3. Klik tombol Report New Problem.  4. Pilih unit peralatan dan isi deskripsi masalah.  5. Klik tombol Submit.
+	UAT-OP-002  (Verifikasi Ubah Status Inventaris)	1. Buat laporan masalah.  2. Setelah laporan dibuat, navigasi ke menu Inventory.  3. Periksa status peralatan yang dilaporkan.
+	UAT-OP-003  (Laporan Masalah dengan Lampiran)	1. Navigasi ke Problem Reports > Report New Problem.  2. Isi formulir.  3. Lampirkan gambar masalah.  4. Klik Submit.
+	UAT-OP-004  (Verifikasi Laporan Masalah Sendiri)	1. Login sebagai Operator.  2. Navigasi ke My Reported Problems.
+Laporan Harian Operator	UAT-OP-005  (Buat Laporan Harian)	1. Login sebagai Operator.  2. Navigasi ke My Daily Reports.  3. Klik tombol Create Today's Report.  4. Isi formulir dengan data aktivitas harian.  5. Klik Submit.
+	UAT-OP-006  (Verifikasi Laporan Harian)	1. Navigasi ke My Daily Reports.  2. Periksa daftar laporan harian.
+	UAT-OP-007  (Edit Laporan Harian)	1. Buat laporan harian baru.  2. Pada laporan yang berstatus Pending Review, klik Edit.  3. Ubah deskripsi aktivitas.  4. Klik Simpan Perubahan.
+	UAT-OP-008  (Hapus Laporan Harian)	1. Buat laporan harian baru.  2. Pada laporan yang berstatus Pending Review, klik Delete.  3. Konfirmasi penghapusan.
+Skenario Negatif	UAT-NEG-001  (Akses Tanpa Izin)	1. Login sebagai Operator.  2. Coba akses URL atau menu User Management atau Approve Requests secara langsung.
+	UAT-NEG-002  (Formulir Kosong)	1. Buka formulir New Request.  2. Langsung klik Submit tanpa mengisi data.
+	UAT-NEG-003  (Input Tipe Data Salah)	1. Pada formulir, masukkan teks di kolom yang seharusnya angka (misalnya, Quantity pada permintaan).
+	UAT-NEG-004  (Login Gagal: Kombinasi Email/Password Tidak Ditemukan)	1. Buka halaman login.  2. Masukkan email yang valid.  3. Masukkan password yang benar untuk email lain.  4. Klik Login.
+	UAT-NEG-005  (Input Email Tidak Sesuai Format)	1. Pada formulir Add New User, masukkan email tanpa format "@".  2. Klik Create User.
+	UAT-NEG-006  (Input Password Tidak Sesuai Kriteria)	1. Pada formulir Add New User, masukkan password yang terlalu pendek (kurang dari 8 karakter).  2. Klik Create User.
+	UAT-NEG-007  (Input Confirm Password Tidak Cocok)	1. Isi Password dan Confirm Password dengan nilai yang berbeda.  2. Klik Create User.
+Pembaruan Laporan	UAT-GEN-001  (Admin Melihat Semua Laporan)	1. Login sebagai Admin.  2. Navigasi ke setiap menu laporan (permintaan, masalah, aktivitas).
+	UAT-GEN-002  (Operator Melihat Laporan Sendiri)	1. Login sebagai Operator.  2. Navigasi ke My Reported Problems dan My Activity Reports.
+	UAT-GEN-003  (Pencarian Laporan Masalah)	1. Navigasi ke Problem Reports.  2. Gunakan fungsi pencarian dan ketik kata kunci yang relevan.
+	UAT-GEN-004  (Filter Laporan Harian)	1. Login sebagai Supervisor.  2. Navigasi ke Daily Reports.  3. Gunakan filter berdasarkan tanggal.
+Skenario Lintas Peran	UAT-FLOW-001  (Alur Permintaan Peralatan Sukses)	1. Sebagai Safety Officer, buat permintaan peralatan baru.  2. Logout, lalu login sebagai Supervisor.  3. Navigasi ke Equipment Requests dan setujui permintaan yang dibuat tadi.  4. Kembali login sebagai Admin dan periksa Recent Activities dan Equipment Requests.
+	UAT-FLOW-002  (Alur Laporan Masalah Sukses)	1. Sebagai Operator, buat laporan masalah.  2. Logout, lalu login sebagai Safety Officer.  3. Navigasi ke Problem Reports dan selesaikan laporan tersebut.  4. Verifikasi status inventaris di menu Inventory berubah kembali.
+	UAT-FLOW-003  (Supervisor Menolak Permintaan)	1. Sebagai Safety Officer, buat permintaan baru.  2. Logout, lalu login sebagai Supervisor.  3. Navigasi ke Equipment Requests dan tolak permintaan tersebut.  4. Kembali login sebagai Safety Officer dan periksa notifikasi.
+Manajemen Kategori Inventaris (Asumsi)	UAT-ADM-016  (Menambah Kategori Baru)	1. Login sebagai Admin dan navigasi ke menu Inventory.  2. Cari fitur untuk menambah kategori (misalnya tombol Add Category).  3. Tambahkan kategori baru dengan nama "Sarung Tangan" dan simpan.
+	
+	
+	
+	
+	
+	
+	
+	UAT-SO-009  (Memilih Kategori Baru)	1. Login sebagai Safety Officer.  2. Navigasi ke New Request.  3. Periksa dropdown Category.  4. Verifikasi bahwa kategori "Sarung Tangan" sudah tersedia untuk dipilih.
+	bang untuk problem report yang equipment unit itu dia emang text tapi harus nama equipment unit yang sudah ada di inventory , lalu nanti ada dropdown dia di klik , baru bisa ke create , dan yang terakhir error di http://127.0.0.1:8000/notifications , kan saya tidak punya bagian notification , jadi safety officer nya cek di bagian request aja , dan satu lagi saya lupa , itu kayaknya dibagian inventory gaada fitur hapus anjay , buatin bang dan yang bisa hapus itu safety officer dan admin
+ jalain

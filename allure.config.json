@@ -1,0 +1,9 @@
+{
+  "allure": {
+    "resultsDir": "allure-results",
+    "reportDir": "allure-report",
+    "attachmentsDir": "allure-results/attachments",
+    "categoriesFile": "allure-results/categories.json",
+    "environmentFile": "allure-results/environment.json"
+  }
+}
